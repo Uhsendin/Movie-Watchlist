@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-color: whitesmoke;
+  }
+  
+  .container {
+    width: 550px;
+    min-height: 779px;
+    margin: auto;
+    background-color: white;
+  }
+  
+  .top-section {
+    width: 550px;
+    height: 208px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #ffffff;
+    background-color: rgba(14, 14, 14, 0.78);
+    letter-spacing: -0.045em;
+  }
+  
+  .top-section-background {
+    background-image: url(posters.jpg);
+    background-position: 10% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .top-section h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 42.7947px;
+    line-height: 24px;
+    margin: 82.44px 0 59px 0;
+  }
+  
+  .top-section a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: inherit;
+    margin: 100px 0 69px 0;
+  }
+
+  .placeholder-text {
+    text-align: center;
+    
+
+  }
+
+  .placeholder-text p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 181px;
+    margin-bottom: 15px;
+    margin-top: 0;
+
+    color: #dfdddd;
+  }
+
+  .placeholder-text a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #363636;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    
+  }
+
+  .fa-solid {
+    font-size: 18px;
+  }

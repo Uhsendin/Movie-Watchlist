@@ -12,7 +12,7 @@ document.getElementById("submit-form").addEventListener("submit", function (e) {
     .then((response) => response.json())
     .then((data) => {
       if (data.Response === "False") {
-        console.log("Oops, something is wrong trying typing");
+        console.log("Unable to find what you’re looking for. Please try another search.");
       } else {
         for (i = 0; i < data.Search.length; i++) {
           let movieId = "";
