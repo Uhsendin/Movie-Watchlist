@@ -21,21 +21,26 @@ document.getElementById("submit-form").addEventListener("submit", function (e) {
           fetch(`http://www.omdbapi.com/?apikey=6c1fc3d8&i=${movieId}`)
             .then((response) => response.json())
             .then((data) => {
+              console.log(data)
               placeholderText.classList.add("hidden");
               movieContainer.innerHTML += renderHtml(
                 data.Poster,
                 data.Title,
                 data.Runtime,
                 data.Genre,
-                data.Plot
+                data.Plot,
+                data.imdbID
               );
+
+
+              
             });
         }
       }
     });
 });
 
-function renderHtml(img, title, runtime, genre, plot) {
+function renderHtml(img, title, runtime, genre, plot,id) {
   let movieHtml = `
     <div class="movie-item">
     <div class="movie-img"><img src="${img}" alt=""></div>
@@ -44,7 +49,7 @@ function renderHtml(img, title, runtime, genre, plot) {
       <div class="movie-subtext">
         <p>${runtime}</p>
         <p>${genre}</p>
-        <button>Watchlist</button>
+        <button data-imdbid="${id}">Watchlist</button>
       </div>
       <div class="movie-desc">${plot}</div>      
     </div>
@@ -53,3 +58,18 @@ function renderHtml(img, title, runtime, genre, plot) {
     `;
   return movieHtml;
 }
+
+document.querySelector(".movie-container").addEventListener("click", (e) => {
+  const isButton = e.target.nodeName = "BUTTON";
+  if(!isButton) {
+    return
+  }
+  const movieId = e.target.dataset.imdbid
+  fetch(`http://www.omdbapi.com/?apikey=6c1fc3d8&i=${movieId}`)
+  .then((response => response.json()))
+  .then((data => {
+    window.localStorage.setItem(movieId,JSON.stringify(data))
+  }))
+  
+  
+})
