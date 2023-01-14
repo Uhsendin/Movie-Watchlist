@@ -1,173 +1,200 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-    background-color: whitesmoke;
-  }
-  
-  .container {
-    width: 550px;
-    min-height: 779px;
-    margin: auto;
-    background-color: white;
-  }
-  
-  .top-section {
-    width: 550px;
-    height: 208px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: #ffffff;
-    background-color: rgba(14, 14, 14, 0.78);
-    letter-spacing: -0.045em;
-  }
-  
-  .top-section-background {
-    background-image: url(posters.jpg);
-    background-position: 10% 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .top-section h1 {
-    margin: 0;
-    font-weight: 800;
-    font-size: 42.7947px;
-    line-height: 24px;
-    margin: 82.44px 0 59px 0;
-  }
-  
-  .top-section a {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    text-decoration: none;
-    color: inherit;
-    margin: 100px 0 69px 0;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: whitesmoke;
+}
 
-  .placeholder-text {
-    text-align: center;
-    
+.container {
+  width: 550px;
+  min-height: 779px;
+  margin: auto;
+  background-color: white;
+}
 
-  }
+.top-section {
+  width: 550px;
+  height: 208px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #ffffff;
+  background-color: rgba(14, 14, 14, 0.78);
+  letter-spacing: -0.045em;
+}
 
-  .placeholder-text p {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
-    padding-top: 181px;
-    margin-bottom: 15px;
-    margin-top: 0;
+.top-section-background {
+  background-image: url(posters.jpg);
+  background-position: 10% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-    color: #dfdddd;
-  }
+.top-section h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 42.7947px;
+  line-height: 24px;
+  margin: 82.44px 0 59px 0;
+}
 
-  .placeholder-text a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    color: #363636;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-    
-  }
+.top-section a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: inherit;
+  margin: 100px 0 69px 0;
+}
 
-  .fa-solid {
-    font-size: 18px;
-  }
+.placeholder-text {
+  text-align: center;
+}
 
-  .movie-container {
-    min-height: 571px;
-    /* margin-top: -40px; */
-  }
-  
-  .placeholder-text {
-    text-align: center;
-    color: #dfdddd;
-  }
-  .placeholder-text h2 {
-    margin-top: 0;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 20px;
-  }
-  
-  .fa-size {
-    font-size: 4em;
-    margin-bottom: 8.75px;
-  }
-  
-  img {
-    margin-left: 44px;
-    margin-right: 21px;
-    width: 99px;
-    height: 147.41px;
-    border-radius: 2.32941px;
-  }
-  
-  .movie-item {
-    display: flex;
-    padding-top: 63px;
-  }
-  
-  .movie-item h3 {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 20px;
-    color: #000000;
-  }
-  
-  .movie-info {
-    margin-right: 44px;
-  }
-  
-  .movie-info h3 {
-    margin-bottom: 0;
-  }
-  
-  .movie-subtext {
-    display: flex;
-  
-    align-items: center;
-    margin-top: 11px;
-    margin-bottom: 8px;
-    color: #111827;
-  }
-  .movie-subtext,
-  .movie-subtext button {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
-    font-family: inherit;
-  }
-  .movie-subtext button {
-    margin-left: 30px;
-  }
-  .movie-subtext p {
-    margin: 0;
-  }
-  .movie-subtext p:first-of-type {
-    margin-right: 19px;
-  }
-  
-  hr {
-    margin-top: 20.59px;
-    margin-bottom: 0;
-    
-  }
-  
-  .movie-desc {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #6b7280;
-  }
-  
-  .hidden {
-    display: none;
-  }
+.placeholder-text p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  padding-top: 181px;
+  margin-bottom: 15px;
+  margin-top: 0;
+
+  color: #dfdddd;
+}
+
+.placeholder-text a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #363636;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.fa-solid {
+  font-size: 18px;
+}
+
+.movie-container {
+  min-height: 571px;
+  /* margin-top: -40px; */
+}
+
+.placeholder-text {
+  text-align: center;
+  color: #dfdddd;
+}
+.placeholder-text h2 {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.fa-size {
+  font-size: 4em;
+  margin-bottom: 8.75px;
+}
+
+.fa-star {
+  margin-left: 7px;
+  margin-right: 4px;
+  color: #fec654;
+  border-radius: 0.75px;
+  font-size: 12px;
+}
+
+img {
+  margin-left: 44px;
+  margin-right: 21px;
+  width: 99px;
+  height: 147.41px;
+  border-radius: 2.32941px;
+}
+
+.movie-item {
+  display: flex;
+  padding-top: 63px;
+}
+
+.movie-item h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.movie-info {
+  margin-right: 44px;
+}
+
+.movie-info h3 {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.movie-info h3 span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #111827;
+}
+.movie-info button {
+  background-color: white;
+  border: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.fa-circle-minus {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.movie-subtext {
+  display: flex;
+
+  align-items: center;
+  margin-top: 11px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+.movie-subtext,
+.movie-subtext button {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: inherit;
+}
+.movie-subtext button {
+  margin-left: 30px;
+}
+.movie-subtext p {
+  margin: 0;
+}
+.movie-subtext p:first-of-type {
+  margin-right: 19px;
+}
+
+hr {
+  margin-top: 20.59px;
+  margin-bottom: 0;
+}
+
+.movie-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6b7280;
+}
+
+.hidden {
+  display: none;
+}

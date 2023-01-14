@@ -12,22 +12,23 @@ window.addEventListener("load", function () {
       movieData.Runtime,
       movieData.Genre,
       movieData.Plot,
-      movieData.imdbID
+      movieData.imdbID,
+      movieData.imdbRating
     );
     removeMovie()
   }
 });
 
-function renderWatchlistHtml(img, title, runtime, genre, plot, id) {
+function renderWatchlistHtml(img, title, runtime, genre, plot, id,rating) {
   let movieHtml = `
       <div class="movie-item">
       <div class="movie-img"><img src="${img}" alt=""></div>
       <div class="movie-info">
-        <h3>${title}</h3>
+        <h3>${title}<i class="fa-solid fa-star"></i><span>${rating}</span></h3>
         <div class="movie-subtext">
           <p>${runtime}</p>
           <p>${genre}</p>
-          <button class="remove-btn" data-imdbid="${id}">Remove</button>
+          <button class="remove-btn" data-imdbid="${id}"><i class="fa-solid fa-circle-minus"></i>Remove</button>
         </div>
         <div class="movie-desc">${plot}</div>      
       </div>

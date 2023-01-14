@@ -88,6 +88,7 @@ form button {
   background: #f9fafb;
   border: 1px solid #d1d5db;
   border-radius: 0px 6px 6px 0px;
+  cursor: pointer;
 }
 
 .movie-container {
@@ -138,11 +139,40 @@ img {
 
 .movie-info h3 {
   margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.movie-info h3 span {
+  font-weight: 400;
+font-size: 12px;
+line-height: 20px;
+color: #111827;
+margin-left: 4px;
+}
+.movie-info button {
+border: none;
+background-color: white;
+font-weight: 400;
+font-size: 12px;
+line-height: 20px;
+color: #111827;
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.fa-circle-plus {
+  margin-right: 5px;
+  font-size: 16px;
 }
 
+.fa-star {
+  margin-left: 8px;
+  color: #FEC654;
+border-radius: 0.75px;
+font-size: 12px;
+}
 .movie-subtext {
   display: flex;
-
   align-items: center;
   margin-top: 11px;
   margin-bottom: 8px;
@@ -178,4 +208,12 @@ hr {
 
 .hidden {
   display: none;
+}
+.error-text {
+  padding-top: 226px;
+font-weight: 700;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+color: #DFDDDD;
 }
