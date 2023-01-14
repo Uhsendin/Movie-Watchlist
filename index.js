@@ -7,12 +7,15 @@ const placeholderText = document.querySelector(".placeholder-text");
 document.getElementById("submit-form").addEventListener("submit", function (e) {
   e.preventDefault();
   userInput = searchInput.value;
+  movieContainer.innerHTML = ""
 
   fetch(`http://www.omdbapi.com/?apikey=6c1fc3d8&s=${userInput}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.Response === "False") {
-        console.log("Unable to find what you’re looking for. Please try another search.");
+        console.log(
+          "Unable to find what you’re looking for. Please try another search."
+        );
       } else {
         for (i = 0; i < data.Search.length; i++) {
           let movieId = "";
@@ -21,26 +24,24 @@ document.getElementById("submit-form").addEventListener("submit", function (e) {
           fetch(`http://www.omdbapi.com/?apikey=6c1fc3d8&i=${movieId}`)
             .then((response) => response.json())
             .then((data) => {
-              console.log(data)
+              // console.log(data)
+              const { Poster, Title, Runtime, Genre, Plot, imdbID } = data;
               placeholderText.classList.add("hidden");
               movieContainer.innerHTML += renderHtml(
-                data.Poster,
-                data.Title,
-                data.Runtime,
-                data.Genre,
-                data.Plot,
-                data.imdbID
+                Poster,
+                Title,
+                Runtime,
+                Genre,
+                Plot,
+                imdbID
               );
-
-
-              
             });
         }
       }
     });
 });
 
-function renderHtml(img, title, runtime, genre, plot,id) {
+function renderHtml(img, title, runtime, genre, plot, id) {
   let movieHtml = `
     <div class="movie-item">
     <div class="movie-img"><img src="${img}" alt=""></div>
@@ -60,16 +61,14 @@ function renderHtml(img, title, runtime, genre, plot,id) {
 }
 
 document.querySelector(".movie-container").addEventListener("click", (e) => {
-  const isButton = e.target.nodeName = "BUTTON";
-  if(!isButton) {
-    return
+  const isButton = (e.target.nodeName = "BUTTON");
+  if (!isButton) {
+    return;
   }
-  const movieId = e.target.dataset.imdbid
+  const movieId = e.target.dataset.imdbid;
   fetch(`http://www.omdbapi.com/?apikey=6c1fc3d8&i=${movieId}`)
-  .then((response => response.json()))
-  .then((data => {
-    window.localStorage.setItem(movieId,JSON.stringify(data))
-  }))
-  
-  
-})
+    .then((response) => response.json())
+    .then((data) => {
+      window.localStorage.setItem(movieId, JSON.stringify(data));
+    });
+});
